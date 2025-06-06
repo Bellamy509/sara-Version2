@@ -1,198 +1,187 @@
+# 🤖 Sara Version FGZ - Lakay AI
+
 <div align="center">
 
-# Lakay AI
-   
-![CopilotKit-Banner](https://github.com/user-attachments/assets/8167c845-0381-45d9-ad1c-83f995d48290)
+![Sara AI Logo](https://img.shields.io/badge/Sara-AI%20Assistant-blue?style=for-the-badge&logo=react)
+![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel)
+
+**Assistant IA intelligent avec intégrations Gmail, Outlook, SharePoint et plus**
+
+[🚀 Demo Live](https://sara-version-fgz.vercel.app) | [📖 Documentation](#features) | [🛠 Installation](#installation)
+
 </div>
 
-Lakay AI is an example for the implementation of the MCP server-client integrations to handle and manage your projects and tasks from your project management applications like Linear.
+## ✨ Fonctionnalités
 
-## Key Features
+### 🔗 Intégrations MCP
+- **📧 Gmail** - Envoi, lecture, gestion des emails
+- **📬 Outlook** - Calendrier, contacts, messages
+- **📁 SharePoint** - Gestion documents et listes
+- **✅ Google Tasks** - Gestion des tâches et listes
+- **🔍 Search** - Recherche multi-sources (Google, DuckDuckGo, Tavily)
+- **💼 LinkedIn** - Création posts, infos entreprises
+- **🎥 YouTube** - Gestion contenu vidéo
 
-- **CopilotKit AI Chat Interface:**  
-  Chat with the CopilotKit AI which acts as useful assitant who can able to provide answers to user queries and perform executable actions inside the application.
-  
-- **Real-Time Interactivity:**  
-  Enjoy a live chat powered by `@copilotkit/react-ui` that orchestrates dynamic state changes and agent responses.
+### 🎨 Interface Utilisateur
+- **🎨 Canvas Interactif** - Interface visuelle avec CopilotKit
+- **🎤 Reconnaissance Vocale** - Commandes vocales intégrées
+- **👤 Authentification** - Système sécurisé avec Supabase
+- **📱 Design Responsif** - Interface moderne et adaptative
+- **🌙 Mode Sombre** - Expérience utilisateur optimisée
 
-- **State Management & Agent Coordination:**  
-  Leverages `@copilotkit/react-core` for robust agent state management and smooth integration of travel and research functionalities.
+### 🛠 Fonctionnalités Techniques
+- **⚡ Next.js 15** - Framework React performant
+- **🔧 TypeScript** - Développement type-safe
+- **🎯 CopilotKit** - IA conversationnelle intégrée
+- **🔐 Variables d'environnement** - Configuration sécurisée
+- **📊 Debugging** - Outils de dépannage intégrés
 
-- **Responsive & Modern UI:**  
-  Designed with Tailwind CSS to ensure your experience is smooth and adaptive across all devices.
+## 🚀 Installation
 
-## Technology Stack
+### Prérequis
+- Node.js 18+ 
+- npm ou yarn
+- Compte GitHub (pour déploiement)
 
-- **Framework:** [Next.js](https://nextjs.org)
-- **UI Library:** React, [CopilotKit UI](https://www.npmjs.com/package/@copilotkit/react-ui)
-- **State Management:** [CopilotKit React Core](https://www.npmjs.com/package/@copilotkit/react-core)
-
-- **Styling:** Tailwind CSS
-- **Additional Libraries:**
-  - React Query for data fetching
-  - Framer Motion for animations
-  - Radix UI for accessible components
-  - React Flow for flow diagrams
-
-## Project Setup Guide
-
-## Prerequisites
-
-Before you begin, ensure you have the following installed on your system:
-- Node.js (v20.x or later recommended)
-- npm, yarn, or pnpm (package manager)
-
-## Installation
-
-1. Clone the repository:
+### 1. Cloner le repository
 ```bash
-git clone <repository-url>
-cd projetlakay-main-2
+git clone https://github.com/Bellamy509/Sara-Version-FGZ.git
+cd Sara-Version-FGZ
 ```
 
-2. Install dependencies:
-Using npm:
+### 2. Installer les dépendances
 ```bash
 npm install
-```
-Or using yarn:
-```bash
+# ou
 yarn install
 ```
-Or using pnpm:
+
+### 3. Configuration environnement
 ```bash
-pnpm install
+cp env.example .env.local
 ```
 
-## Environment Setup
-
-1. Create a `.env` file in the root directory:
-```bash
-cp env.example .env
+Configurez vos clés API dans `.env.local` :
+```env
+# Choisissez l'une des options :
+OPENAI_API_KEY=your_openai_api_key
+# OU
+NEXT_PUBLIC_COPILOT_CLOUD_API_KEY=your_copilot_cloud_key
 ```
 
-2. Configure your environment variables in the `.env` file:
-- If self-hosting:
-  ```
-  OPENAI_API_KEY=your_openai_api_key_here
-  ```
-- If using Copilot Cloud:
-  ```
-  NEXT_PUBLIC_COPILOT_CLOUD_API_KEY=your_copilot_cloud_api_key_here
-  ```
-
-## Development Server
-
-Start the development server:
-
-Using npm:
+### 4. Lancer en développement
 ```bash
 npm run dev
 ```
-Or using yarn:
+
+Visitez [http://localhost:3000](http://localhost:3000)
+
+## 🌐 Déploiement Vercel
+
+### Automatique (Recommandé)
+1. Fork ce repository
+2. Connectez-vous à [vercel.com](https://vercel.com)
+3. Importez votre fork
+4. Configurez les variables d'environnement
+5. Déployez !
+
+### Via CLI
 ```bash
-yarn dev
-```
-Or using pnpm:
-```bash
-pnpm dev
+npm i -g vercel
+vercel login
+vercel --prod
 ```
 
-Once started, open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+## 📋 Structure du Projet
 
-## Available Scripts
+```
+Sara-Version-FGZ/
+├── src/
+│   ├── app/                  # Pages Next.js App Router
+│   │   ├── api/             # API routes
+│   │   ├── canvas/          # Interface Canvas
+│   │   └── login/           # Authentification
+│   ├── components/          # Composants React
+│   │   ├── mcp-config-modal.tsx  # Configuration MCP
+│   │   ├── canvas.tsx       # Interface Canvas
+│   │   └── chat-window.tsx  # Chat IA
+│   ├── hooks/              # Custom hooks
+│   └── lib/                # Utilitaires
+├── vercel.json             # Configuration Vercel
+├── .vercelignore          # Fichiers ignorés
+└── package.json           # Dépendances
+```
 
-- `npm run dev` - Start the development server
-- `npm run build` - Build the application for production
-- `npm run start` - Start the production server
-- `npm run lint` - Run ESLint for code linting
+## 🔧 Configuration MCP
 
-## Tech Stack
+### Services Disponibles
 
-This project uses:
-- Next.js 15.1.6
-- React 19
-- TypeScript
-- Tailwind CSS
-- Various UI components from Radix UI
-- Leaflet for maps
-- React Query for data fetching
-- Framer Motion for animations
+| Service | Description | Actions |
+|---------|-------------|---------|
+| 📧 **Gmail** | Gestion emails | Envoi, lecture, réponse, contacts |
+| 📬 **Outlook** | Calendrier & emails | Événements, contacts, drafts |
+| 📁 **SharePoint** | Documents | Dossiers, listes, utilisateurs |
+| ✅ **Google Tasks** | Tâches | CRUD tâches et listes |
+| 🔍 **Search** | Recherche | Multi-sources, actualités, cartes |
+| 💼 **LinkedIn** | Réseau pro | Posts, infos entreprises |
+| 🎥 **YouTube** | Vidéos | Sous-titres, vignettes |
 
-## Additional Notes
+### Gestion des Identifiants
+- **Customer ID** : Identifiant unique utilisateur
+- **Agent ID** : Identifiant de l'agent IA
+- **Régénération** : Bouton pour créer de nouveaux IDs
 
-- The project uses TypeScript for type safety
-- ESLint is configured for code linting
-- Tailwind CSS is used for styling
-- The project includes various UI components from Radix UI and other libraries
+## 🛠 Dépannage
 
-## Troubleshooting
+### Gmail ne se connecte pas ?
+1. Cliquez sur "Régénérer Gmail"
+2. Utilisez le bouton test (🔍)
+3. Vérifiez la console (F12)
 
-If you encounter any issues:
-
-1. Make sure all prerequisites are installed correctly
-2. Verify that your Node.js version is compatible
-3. Ensure all environment variables are set correctly
-4. Try removing `node_modules` and package lock files, then reinstall dependencies:
-   ```bash
-   rm -rf node_modules
-   rm package-lock.json # or yarn.lock or pnpm-lock.yaml
-   npm install # or yarn install or pnpm install
-   ```
-
-## Project Structure
-
-- **/src/app:**  
-  Contains Next.js page components, layouts, and global styles.
-
-- **/src/components:**  
-  Houses reusable components including agent interfaces (Travel, Research, Chat, Map, Sidebar) and UI elements.
-
-- **/src/providers:**  
-  Wraps the global state providers responsible for managing agent states.
-
-- **/src/lib:**  
-  Contains utility functions and configuration files.
-
-- **/src/hooks:**  
-  Custom React hooks for shared functionality.
-
-- **/src/contexts:**  
-  React context providers for global state management.
-
-## Development
-
-- **Linting:**  
-  ```bash
-  npm run lint
-  # or
-  yarn lint
-  # or
-  pnpm lint
-  ```
-
-- **Building for Production:**  
-  ```bash
-  npm run build
-  # or
-  yarn build
-  # or
-  pnpm build
-  ```
-
-## Deployment
-
-The easiest way to deploy this project is with [Vercel](https://vercel.com). Build and start your application with:
+### Erreurs de build ?
 ```bash
 npm run build
-npm run start
+# Vérifier les erreurs TypeScript
 ```
-Follow Vercel's deployment guide for more details if needed.
 
-## Contributing
+### Variables d'environnement manquantes ?
+- Vérifiez `.env.local`
+- Configurez sur Vercel Dashboard
 
-Contributions are welcome! Fork the repository and submit a pull request with any improvements, bug fixes, or new features.
+## 📚 Technologies Utilisées
 
-## License
+- **Framework** : Next.js 15
+- **Language** : TypeScript
+- **UI** : React, Tailwind CSS, Lucide Icons
+- **IA** : CopilotKit, OpenAI
+- **Auth** : Supabase
+- **Déploiement** : Vercel
+- **MCP** : Composio Integrations
 
-Distributed under the MIT License. See `LICENSE` for more information.
+## 🤝 Contribution
+
+1. Fork le projet
+2. Créez une branche feature (`git checkout -b feature/AmazingFeature`)
+3. Committez vos changements (`git commit -m 'Add AmazingFeature'`)
+4. Push sur la branche (`git push origin feature/AmazingFeature`)
+5. Ouvrez une Pull Request
+
+## 📝 Licence
+
+Ce projet est sous licence MIT. Voir `LICENSE` pour plus d'informations.
+
+## 👨‍💻 Auteur
+
+**Bellamy509** - [GitHub](https://github.com/Bellamy509)
+
+---
+
+<div align="center">
+
+**⭐ N'oubliez pas de donner une étoile si ce projet vous a aidé ! ⭐**
+
+Made with ❤️ using Next.js and CopilotKit
+
+</div>
