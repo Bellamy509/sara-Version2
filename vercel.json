@@ -8,10 +8,6 @@
       "maxDuration": 30
     }
   },
-  "env": {
-    "NEXT_PUBLIC_COPILOT_CLOUD_API_KEY": "@copilot_cloud_api_key",
-    "OPENAI_API_KEY": "@openai_api_key"
-  },
   "headers": [
     {
       "source": "/api/(.*)",
